@@ -1,0 +1,24 @@
+{
+  "request": {
+    "name": "schemaRequestName",
+    "data": {
+      "companyName": "companyName",
+      "yearsOfTrade": 3,
+      "prototype": {
+        "name": "john doe",
+        "age": 3
+      }
+    }
+  },
+  "response": {
+    "name": "schemaResponseName",
+    "data": {
+      "companyName": "companyName",
+      "yearsOfTrade": 3,
+      "prototype": {
+        "name": "john doe",
+        "age": 3
+      }
+    }
+  }
+}
