@@ -21,7 +21,6 @@ def create_swagger_definition(schema_name, schema_type, schema_data):
     if schema_type == "object":
         properties = {}
         for key, value in schema_data.items():
-            print(value)
             if isinstance(value, dict):
                 properties[key] = create_swagger_definition(f"{schema_name}{key}", "object", value)
             elif isinstance(value, list):
@@ -43,7 +42,6 @@ def create_swagger_definitions(json_file):
     swagger_definitions = {}
     for schema_name, schema in schema_data.items():
         if schema_name == 'request':
-            print(schema)
             request_definition = create_swagger_definition(f"{schema.get("name")}{schema_name.title()}", "object", schema["data"])
             swagger_definitions[f"{schema["name"]}Request"] = request_definition
         if schema_name == 'response':
